@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Movie Junkie</title>
+
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'imdb/css/style.css' %}" />
+  </head>
+  <body>
+    
+    <div id="content">
+      <div class="container">
+        <div class="movie">
+          <div class="name"><h3>{{movie.name}}</h3></div>
+          <div class="director-name"><strong>Director:- </strong>{{movie.director.name}}</div>
+          <div class="imdb_score"><strong>IMDB Score:-</strong> {{movie.imdb_score}}</div>
+          <div class="popularity">
+            <strong>99Popularity:- </strong> {{movie.popularity}}
+          </div>
+          <div class="genres">
+            <strong>Genre:-</strong> 
+            {% for genre in movie.genres.all %}
+              {{genre.name}}{% include "imdb/comma.html" %}
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </body>
+</html>

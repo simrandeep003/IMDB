@@ -1,0 +1,111 @@
+body {
+  background: #eff4f6;
+  margin: 0px;
+  background-color: #f5fffa;
+}
+#content {
+  position: relative;
+}
+.container {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+}
+.container-1{
+  width: 600px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  padding-top: 14px;
+}
+.container-1 input#search{
+  width: 100%;
+  height: 50px;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  background-color: #b0c4de;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: background .55s ease;
+  -moz-transition: background .55s ease;
+  -ms-transition: background .55s ease;
+  -o-transition: background .55s ease;
+  transition: background .55s ease;
+}
+.container-1 input#search::-webkit-input-placeholder {
+   color: #65737e;
+}
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #65737e;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color: #65737e;  
+}
+.container-1 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 26px;
+  z-index: 1;
+  color: #4f5b66;
+}
+.container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+  outline:none;
+  background: #ffffff;
+}
+.movies {
+  margin-top: 20px;
+}
+.movies a.movie-link {
+  text-decoration: none;
+  color: #000;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+}
+.movies .movie-card {
+  max-height: 100px;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-bottom-width: 2px;
+  border-top-width: 0;
+  width: 300px;
+  padding: 10px;
+  background-color: #f5f5dc;
+}
+.movies .movie-card .movie-name {
+  font-weight: bold;
+}
+.movie {
+  width: 300px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-bottom-width: 2px;
+  border-top-width: 0;
+  margin: 0 auto;
+  line-height: 30px;
+  margin-top: 40px;
+  background-color: #f5f5dc;
+}
+.pagination {
+  clear: both;
+}
+
+

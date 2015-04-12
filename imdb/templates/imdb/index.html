@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Movie Junkie</title>
+
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'imdb/css/style.css' %}" />
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div id="content">
+      <div class="header">
+        <div class="container">
+          <div class="navbar">
+            <form action="{% url 'imdb:search' %}" method="post">
+              {% csrf_token %}
+              <div class="container-1">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" name="search" placeholder="Search for movies, directors, genres..." />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="movies">
+          {% for movie in movies %}
+            <a href="{% url 'imdb:movie_detail' movie.id %}" class="movie-link">
+              <div class="movie-card">
+                <div class="movie-name">{{movie.name}}</div>
+                <div class="genre-list">
+                  {% for genre in movie.genres.all %}
+                    {{genre.name}}{% include "imdb/comma.html" %}
+                  {% endfor %}
+                </div>
+                <div class="movie-director">{{movie.director.name}}</div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+        <div class="pagination">
+          <span class="step-links">
+            {% if movies.has_previous %}
+                <a href="?page={{ movies.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ movies.number }} of {{ movies.paginator.num_pages }}.
+            </span>
+
+            {% if movies.has_next %}
+                <a href="?page={{ movies.next_page_number }}">next</a>
+            {% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </body>
+</html>
