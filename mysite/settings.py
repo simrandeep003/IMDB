@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'imdb'
+    'imdb' #added imdb app
 )
 
 MIDDLEWARE_CLASSES = (
@@ -74,28 +74,28 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_3df5c52c709410b',
-        'HOST' : 'us-cdbr-iron-east-02.cleardb.net',
-        'PORT' : 3306,
-        'USER' : 'b6e1bd66787e5b',
-        'PASSWORD' : '19f4f51b',
-    }
-}
-#local database settings
+# heroku settings
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'imdb',
-#         'HOST' : 'localhost',
+#         'NAME': 'heroku_3df5c52c709410b',
+#         'HOST' : 'us-cdbr-iron-east-02.cleardb.net',
 #         'PORT' : 3306,
-#         'USER' : 'root123',
-#         'PASSWORD' : 'root123',
+#         'USER' : 'b6e1bd66787e5b',
+#         'PASSWORD' : '19f4f51b',
 #     }
 # }
+#local database settings
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'imdb',
+        'HOST' : 'localhost',
+        'PORT' : 3306,
+        'USER' : 'root123',
+        'PASSWORD' : 'root123',
+    }
+}
 
 # 'ENGINE': 'django.db.backends.mysql',
 
