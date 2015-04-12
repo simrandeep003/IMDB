@@ -1,0 +1,101 @@
+2015-04-12T18:29:53.032980+00:00 app[web.1]:   File "/app/.heroku/python/bin/gunicorn", line 11, in <module>
+2015-04-12T18:29:53.033257+00:00 app[web.1]:     super(Application, self).run()
+2015-04-12T18:29:53.033291+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 72, in run
+2015-04-12T18:29:53.033460+00:00 app[web.1]:     self.manage_workers()
+2015-04-12T18:29:53.033477+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 477, in manage_workers
+2015-04-12T18:29:53.033594+00:00 app[web.1]:     self.spawn_workers()
+2015-04-12T18:29:53.033616+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 541, in spawn_workers
+2015-04-12T18:29:53.033718+00:00 app[web.1]:     time.sleep(0.1 * random.random())
+2015-04-12T18:29:53.033742+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 214, in handle_chld
+2015-04-12T18:29:53.033801+00:00 app[web.1]:     self.reap_workers()
+2015-04-12T18:29:53.033822+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 459, in reap_workers
+2015-04-12T18:29:53.034065+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2015-04-12T18:29:53.033948+00:00 app[web.1]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2015-04-12T18:29:53.799890+00:00 heroku[web.1]: Process exited with status 1
+2015-04-12T18:29:53.820866+00:00 heroku[web.1]: State changed from starting to crashed
+2015-04-12T18:30:27.361481+00:00 heroku[api]: Starting process with command `python manage.py migrate` by simrandeep.bagga@gmail.com
+2015-04-12T18:30:32.894888+00:00 heroku[run.4436]: Starting process with command `python manage.py migrate`
+2015-04-12T18:30:32.852230+00:00 heroku[run.4436]: Awaiting client
+2015-04-12T18:30:33.179390+00:00 heroku[run.4436]: State changed from starting to up
+2015-04-12T18:30:38.865238+00:00 heroku[run.4436]: State changed from up to complete
+2015-04-12T18:30:38.850257+00:00 heroku[run.4436]: Process exited with status 0
+2015-04-12T18:32:22.334819+00:00 heroku[api]: Scale to web=1 by simrandeep.bagga@gmail.com
+2015-04-12T18:32:36.298944+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=hidden-wildwood-4385.herokuapp.com request_id=c12f1e56-e5ce-4a3b-9763-e54415e7f285 fwd="106.51.232.119" dyno= connect= service= status=503 bytes=
+2015-04-12T18:32:37.461817+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=hidden-wildwood-4385.herokuapp.com request_id=e3573823-73b8-4288-aeef-43cedc98358a fwd="106.51.232.119" dyno= connect= service= status=503 bytes=
+2015-04-12T18:32:44.886889+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/admin" host=hidden-wildwood-4385.herokuapp.com request_id=417f923f-8b63-4847-9ff1-b4e5c708f1f2 fwd="106.51.232.119" dyno= connect= service= status=503 bytes=
+2015-04-12T18:32:46.091555+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=hidden-wildwood-4385.herokuapp.com request_id=37928a54-e15a-417f-a355-897c1db7010c fwd="106.51.232.119" dyno= connect= service= status=503 bytes=
+2015-04-12T18:34:17.245645+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/imdb/" host=hidden-wildwood-4385.herokuapp.com request_id=ec5d6ff2-64b9-4adb-b3e7-63a453d040c6 fwd="106.51.232.119" dyno= connect= service= status=503 bytes=
+2015-04-12T18:34:18.434435+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=hidden-wildwood-4385.herokuapp.com request_id=65172ae6-9565-43e7-add7-7ecf42a00fa4 fwd="106.51.232.119" dyno= connect= service= status=503 bytes=
+2015-04-12T18:43:10.208907+00:00 heroku[api]: Starting process with command `python manage.py runserver` by simrandeep.bagga@gmail.com
+2015-04-12T18:43:15.138737+00:00 heroku[run.1155]: Starting process with command `python manage.py runserver`
+2015-04-12T18:43:15.113550+00:00 heroku[run.1155]: Awaiting client
+2015-04-12T18:43:15.482190+00:00 heroku[run.1155]: State changed from starting to up
+2015-04-12T18:43:17.348304+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/imdb/" host=hidden-wildwood-4385.herokuapp.com request_id=ed826bd8-67d1-4b1b-a501-bcb867c26ce1 fwd="106.51.232.119" dyno= connect= service= status=503 bytes=
+2015-04-12T18:43:18.652203+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=hidden-wildwood-4385.herokuapp.com request_id=abaf2083-9220-4beb-9bc9-13aac1efaa44 fwd="106.51.232.119" dyno= connect= service= status=503 bytes=
+2015-04-12T18:43:55.422643+00:00 heroku[run.1155]: State changed from up to complete
+2015-04-12T18:43:55.412867+00:00 heroku[run.1155]: Process exited with status 0
+2015-04-12T18:45:14.304639+00:00 heroku[api]: Starting process with command `python manage.py runserver 0.0.0.0:80` by simrandeep.bagga@gmail.com
+2015-04-12T18:45:19.666888+00:00 heroku[run.1945]: Awaiting client
+2015-04-12T18:45:19.747996+00:00 heroku[run.1945]: Starting process with command `python manage.py runserver 0.0.0.0:80`
+2015-04-12T18:45:20.069144+00:00 heroku[run.1945]: State changed from starting to up
+2015-04-12T18:45:25.699150+00:00 heroku[run.1945]: State changed from up to complete
+2015-04-12T18:45:25.679365+00:00 heroku[run.1945]: Process exited with status 1
+2015-04-12T18:46:29.111153+00:00 heroku[web.1]: State changed from crashed to starting
+2015-04-12T18:46:33.370783+00:00 heroku[web.1]: Starting process with command `gunicorn imdb.wsgi --log-file -`
+2015-04-12T18:46:35.348935+00:00 app[web.1]: [2015-04-12 18:46:35 +0000] [3] [INFO] Listening at: http://0.0.0.0:36936 (3)
+2015-04-12T18:46:35.349039+00:00 app[web.1]: [2015-04-12 18:46:35 +0000] [3] [INFO] Using worker: sync
+2015-04-12T18:46:35.360038+00:00 app[web.1]: [2015-04-12 18:46:35 +0000] [9] [INFO] Booting worker with pid: 9
+2015-04-12T18:46:35.364249+00:00 app[web.1]:     worker.init_process()
+2015-04-12T18:46:35.364247+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2015-04-12T18:46:35.364250+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-04-12T18:46:35.364257+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-04-12T18:46:35.364263+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2015-04-12T18:46:35.364258+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-04-12T18:46:35.364261+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-04-12T18:46:35.364260+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-04-12T18:46:35.364275+00:00 app[web.1]: Traceback (most recent call last):
+2015-04-12T18:46:35.364252+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-04-12T18:46:35.348205+00:00 app[web.1]: [2015-04-12 18:46:35 +0000] [3] [INFO] Starting gunicorn 19.3.0
+2015-04-12T18:46:35.364241+00:00 app[web.1]: [2015-04-12 18:46:35 +0000] [9] [ERROR] Exception in worker process:
+2015-04-12T18:46:35.364267+00:00 app[web.1]: ImportError: No module named wsgi
+2015-04-12T18:46:35.364265+00:00 app[web.1]:     __import__(module)
+2015-04-12T18:46:35.364245+00:00 app[web.1]: Traceback (most recent call last):
+2015-04-12T18:46:35.364276+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2015-04-12T18:46:35.364254+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-04-12T18:46:35.364279+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-04-12T18:46:35.364282+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-04-12T18:46:35.364255+00:00 app[web.1]:     self.callable = self.load()
+2015-04-12T18:46:35.364294+00:00 app[web.1]: ImportError: No module named wsgi
+2015-04-12T18:46:35.364292+00:00 app[web.1]:     __import__(module)
+2015-04-12T18:46:35.392978+00:00 app[web.1]:   File "/app/.heroku/python/bin/gunicorn", line 11, in <module>
+2015-04-12T18:46:35.393294+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 174, in run
+2015-04-12T18:46:35.393615+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 214, in handle_chld
+2015-04-12T18:46:35.364288+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-04-12T18:46:35.393236+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 72, in run
+2015-04-12T18:46:35.393469+00:00 app[web.1]:     self.spawn_workers()
+2015-04-12T18:46:35.393674+00:00 app[web.1]:     self.reap_workers()
+2015-04-12T18:46:35.364289+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-04-12T18:46:35.393141+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 189, in run
+2015-04-12T18:46:35.364291+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2015-04-12T18:46:35.393056+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+2015-04-12T18:46:35.393272+00:00 app[web.1]:     Arbiter(self).run()
+2015-04-12T18:46:35.393592+00:00 app[web.1]:     time.sleep(0.1 * random.random())
+2015-04-12T18:46:35.364278+00:00 app[web.1]:     worker.init_process()
+2015-04-12T18:46:35.364301+00:00 app[web.1]: [2015-04-12 18:46:35 +0000] [9] [INFO] Worker exiting (pid: 9)
+2015-04-12T18:46:35.364281+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-04-12T18:46:35.392971+00:00 app[web.1]: Traceback (most recent call last):
+2015-04-12T18:46:35.364284+00:00 app[web.1]:     self.callable = self.load()
+2015-04-12T18:46:35.393023+00:00 app[web.1]:     sys.exit(run())
+2015-04-12T18:46:35.393348+00:00 app[web.1]:     self.manage_workers()
+2015-04-12T18:46:35.393698+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 459, in reap_workers
+2015-04-12T18:46:35.364286+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-04-12T18:46:35.393109+00:00 app[web.1]:     WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2015-04-12T18:46:35.364285+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-04-12T18:46:35.393211+00:00 app[web.1]:     super(Application, self).run()
+2015-04-12T18:46:35.393371+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 477, in manage_workers
+2015-04-12T18:46:35.393490+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 541, in spawn_workers
+2015-04-12T18:46:35.393882+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2015-04-12T18:46:35.393784+00:00 app[web.1]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2015-04-12T18:46:36.230909+00:00 heroku[web.1]: Process exited with status 1
+2015-04-12T18:46:36.248248+00:00 heroku[web.1]: State changed from starting to crashed
+2015-04-12T18:51:08.257642+00:00 heroku[api]: Scale to web=1 by simrandeep.bagga@gmail.com
